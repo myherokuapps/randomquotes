@@ -3,16 +3,23 @@
   <head>
     <title>Welcome to Random quotes</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-LlPOZK7jvvPEMrrhdqVlEYmX2u/GWKdcq/p7wuVYAUladqNeK7VN1PUZQDmiqlql" crossorigin="anonymous">  </head>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-LlPOZK7jvvPEMrrhdqVlEYmX2u/GWKdcq/p7wuVYAUladqNeK7VN1PUZQDmiqlql" crossorigin="anonymous"> 
+    <script type="text/javascript">function myFunction() {
+        location.reload();
+    } </script>
+ </head>
   <body>
         <div class="jumbotron">
                 <h1 class="display-3">Random Quotes</h1>
                 <p class="lead">Your random quote is  <%= quote %></p>
                 <hr class="my-4">
-                <p>How was that ?</p>
+                <p>How was that ??</p>
+                <button class="btn btn-success" onclick="myFunction()">like it</button>
                 <p class="lead">
-                  <a class="btn btn-primary btn-lg" href="#" role="button">Read more</a>
+                  <a class="btn btn-primary btn-lg" href="/quotes" role="button">Read more</a>
                 </p>
+                Made with <span style="color: #e25555;">&#9829;</span> by Apoorv Anand
+
               </div>
   </body>
 </html>
