@@ -25,10 +25,22 @@ app.get('/quotes', (req, res,next) => {
    let max=75967;
      var x= Math.floor(Math.random() *Math.floor(max));
      //console.log(x);
-      console.log('Your random Quote is '+messages[x]);
+      //console.log('Your random Quote is '+messages[x]);
       if(err) return next(err);
       //res.send('Your random Quote is '+messages[x]);
       res.render(__dirname + '/views/quote.ejs',{ quote:messages[x] });
+    
+  })
+})
+app.get('/api', (req, res,next) => {
+  Message.find({},'-_id',(err, messages) => {
+   let max=75967;
+     var x= Math.floor(Math.random() *Math.floor(max));
+     //console.log(x);
+      console.log('Your random Quote is '+messages[x]);
+      if(err) return next(err);
+      res.send('Your random Quote is '+messages[x]);
+     // res.render(__dirname + '/views/quote.ejs',{ quote:messages[x] });
     
   })
 })

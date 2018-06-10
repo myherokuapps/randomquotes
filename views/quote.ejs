@@ -5,16 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-LlPOZK7jvvPEMrrhdqVlEYmX2u/GWKdcq/p7wuVYAUladqNeK7VN1PUZQDmiqlql" crossorigin="anonymous"> 
     <script type="text/javascript">function myFunction() {
-        location.reload();
-    } </script>
+         location.reload();} 
+         function ran_col(){
+            color ='#';
+            letters =['fff','17a2b8','20c997','28a745','ffc107','fd7e14','dc3545','e83e8c','6f42c1','6610f2','007bff'];
+            color += letters[Math.floor(Math.random()*letters.length)];
+            document.body.style.background= color;
+        }
+         </script>
  </head>
-  <body>
+  <body onload="ran_col()">
         <div class="jumbotron">
                 <h1 class="display-3">Random Quotes</h1>
                 <p class="lead">Your random quote is  <%= quote %></p>
                 <hr class="my-4">
                 <p>How was that ??</p>
-                <button class="btn btn-success" onclick="myFunction()">like it</button>
+                <button class="btn btn-success" onclick="myFunction()||ran_col()">like it</button>
                 <p class="lead">
                   <a class="btn btn-primary btn-lg" href="/quotes" role="button">Read more</a>
                 </p>
