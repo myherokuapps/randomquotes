@@ -3,10 +3,16 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-LlPOZK7jvvPEMrrhdqVlEYmX2u/GWKdcq/p7wuVYAUladqNeK7VN1PUZQDmiqlql" crossorigin="anonymous">  </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/quotes">Click here to go to  Random quotes</a>
+      <div class="jumbotron">
+          <h1 class="display-3"><%= title %></h1>
+          <p class="lead">This is a random quote generator. </p>
+          <hr class="my-4">
+          <p>I tell you interesting random quotes</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/quotes" role="button">Click to read</a>
+          </p>
+        </div>
   </body>
 </html>
