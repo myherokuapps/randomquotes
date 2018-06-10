@@ -20,13 +20,18 @@
   <body onload="ran_col()">
         <div class="jumbotron">
                 <h1 class="display-3">Random Quotes</h1>
-                <p class="lead">Your random quote is  <%= quote %></p>
+                <!--h2 class="lead">Your random quote is  <%= quote %></h2-->
+                <blockquote class="blockquote text-right">
+  <p class="mb-0"><%= quote %> </p>
+  <footer class="blockquote-footer"><cite title="Source Title"> By <%= author %> <%= genre %></cite></footer>
+</blockquote>
                 <hr class="my-4">
                 <p>How was that ??</p>
                 <button class="btn btn-success" onclick="myFunction()||ran_col()">like it</button>
+                
                 <p class="lead">
                   <a class="btn btn-primary btn-lg" href="/quotes" role="button">Read more</a>
-                </p>
+                  <a class="btn btn-info btn-lg" href="/api" role="button">Click to go to api</a></p>
                 Made with <span style="color: #e25555;">&#9829;</span> by Apoorv Anand
 
               </div>

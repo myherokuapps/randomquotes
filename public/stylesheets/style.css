@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+.jumbotron{
+  background: /* on top */
+  repeating-linear-gradient(
+-45deg,
+transparent,
+transparent 10px,
+#ccc 10px,
+#ccc 15px
+),
+/*on bottom*/
+linear-gradient(
+to bottom,
+#eee,
+#999
+
+);
+}

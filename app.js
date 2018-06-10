@@ -9,14 +9,16 @@ var usersRouter = require('./routes/users');
 var mongoose = require('mongoose')
 mongoose.Promise = Promise
 
-var dbUrl = 'mongodb://localhost:27017/quotes'
+var dbUrl = 'mongodb://quotes:quotes123@ds147864.mlab.com:47864/data'
 var Schema =mongoose.Schema;
 var Message = new Schema({
-  "_id":Object,
-  "QUOTE;AUTHOR;GENRE":String
+  _id:Object,
+  QUOTE:String,
+  AUTHOR:String,
+  "GENRE":String
 })
 
-var Message = mongoose.model('Message', Message,"random")
+var Message = mongoose.model('Message', Message,"quotes")
 
 
 var app = express();
@@ -28,7 +30,7 @@ app.get('/quotes', (req, res,next) => {
       //console.log('Your random Quote is '+messages[x]);
       if(err) return next(err);
       //res.send('Your random Quote is '+messages[x]);
-      res.render(__dirname + '/views/quote.ejs',{ quote:messages[x] });
+      res.render(__dirname + '/views/quote.ejs',{ quote:messages[x].QUOTE, author:messages[x].AUTHOR, genre:messages[x].GENRE});
     
   })
 })
